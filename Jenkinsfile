@@ -18,7 +18,5 @@ pipeline {
                 sh 'docker run -d -p 3456:3456 --name pycontainer python:latest'
             }
         }
-
-        
     }
 }
