@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Run Docker Container') {
+            steps {
+                // Run the Docker container
+                sh 'docker build -t saldiriweb .'
+                sh 'docker run -d  -p 3000:3000 saldiriweb:latest'
+
+            }
+        }
+    }
+}
